@@ -2,149 +2,206 @@
 
 ![Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux)
 ![Windows](https://img.shields.io/badge/OS-Windows-blue?logo=windows)
-![Virtualization](https://img.shields.io/badge/Platform-Hyper--V-purple)
+![Docker](https://img.shields.io/badge/Container-Docker-blue?logo=docker)
+![Proxmox](https://img.shields.io/badge/Virtualization-Proxmox-orange)
+![pfSense](https://img.shields.io/badge/Firewall-pfSense-red)
 ![Security](https://img.shields.io/badge/Focus-Cybersecurity-red)
 ![Status](https://img.shields.io/badge/Project-Active-brightgreen)
-![License](https://img.shields.io/badge/License-Educational-lightgrey)
 
-A personal cybersecurity homelab built to develop hands-on skills in system administration, networking, security monitoring, vulnerability analysis, and digital forensics.
+A personal cybersecurity homelab built to simulate real-world infrastructure using virtualization, containerization, and security tooling.
 
-This lab simulates real-world environments using virtual machines and security tools to practice offensive and defensive techniques in a controlled setting.
+This environment focuses on **system administration, network control, monitoring, and security analysis** across a mixed Linux and Windows ecosystem.
 
 ---
 
 # 📌 Overview
 
-This homelab is designed to provide practical experience with:
+This homelab is built on a **Proxmox virtualization platform**, hosting multiple virtual machines and services used for cybersecurity experimentation and infrastructure management.
 
-- Linux and Windows system administration
-- Network configuration and troubleshooting
-- Security monitoring and log analysis
-- Vulnerability scanning and enumeration
-- Incident investigation and response
-- Digital forensics workflows
+The lab is designed to provide hands-on experience with:
 
-The focus is on building **real, applicable skills** used in cybersecurity and IT infrastructure roles.
+- Virtualization and infrastructure management
+- Firewall configuration and network control
+- Containerized applications (Docker)
+- DNS filtering and traffic visibility
+- Host-based monitoring and logging
+- Cross-platform system administration
 
 ---
 
 # 🎯 Lab Goals
 
-- Build and manage a secure virtualized environment
-- Practice system hardening and administration
-- Analyze network traffic and system behavior
-- Detect and investigate suspicious activity
-- Perform forensic analysis on systems and disk images
-- Strengthen troubleshooting and debugging skills
-- Document configurations and workflows
+- Build and manage a virtualized infrastructure using Proxmox  
+- Configure and maintain firewall rules using pfSense  
+- Deploy and manage services using Docker  
+- Monitor system and network activity  
+- Filter and control network traffic (DNS-level)  
+- Practice security analysis and investigation  
+- Strengthen troubleshooting and debugging skills  
 
 ---
 
 # 🧰 Tools & Technologies
 
-## 💻 Infrastructure
-- **Hyper-V** — virtualization platform
-- **Ubuntu Server / Debian** — Linux systems
-- **Windows 10/11** — workstation environments
+## 🖥️ Virtualization & Networking
+- **Proxmox** — Type 1 hypervisor for managing virtual machines
+- **pfSense** — firewall and router for network segmentation and control
+
+## 💻 Systems
+- **Ubuntu Server** — primary host for Docker services
+- **Windows 11** — workstation environment
+- **Windows Server** — server administration and services
+- **Parrot OS** — security testing and analysis
+- **TrueNAS** — storage and file management
+
+## 🐳 Containerized Services (Docker)
+- **Pi-hole** — network-wide DNS filtering
+- **Wazuh** — host-based monitoring and security visibility
+- **Wildid** — self-hosted application
 
 ## 🔐 Security & Analysis
-- **Wazuh** — host-based monitoring and security visibility
 - **Nmap** — network scanning and enumeration
-- **Wireshark** — packet capture and traffic analysis
+- **Wireshark** — packet capture and analysis
+- **SSH / Bash** — remote administration
 
 ## 🧪 Forensics
-- **Autopsy** — digital forensic analysis
-- **dd** — disk imaging and acquisition
+- **Autopsy** — forensic analysis
+- **dd** — disk imaging
 - **Hash verification tools** — integrity validation
-
-## ⚙️ System & Network
-- SSH / Bash / Linux CLI
-- File systems, partitions, and mounting
-- Basic networking (IP addressing, routing concepts)
 
 ---
 
 # 🏗️ Lab Architecture
 
-## Environment Design
+## Core Design
 
-This homelab runs on a virtualized environment using Hyper-V and includes:
+The lab follows a layered architecture:
 
-- Multiple virtual machines (Linux + Windows)
-- Isolated lab network for safe testing
-- Configurable systems for security experimentation
+1. **Proxmox (Host Layer)**
+   - Runs all virtual machines
+   - Central management of infrastructure
 
-## Key Concepts Practiced
+2. **pfSense (Network Layer)**
+   - Acts as firewall and router
+   - Controls traffic flow and access
+   - Enables network segmentation
 
-- System isolation and controlled environments
-- Host-to-host communication
-- Secure remote access (SSH)
-- Network scanning and validation
-- Traffic inspection and analysis
+3. **Virtual Machines (System Layer)**
+   - Ubuntu Server (Docker host)
+   - Windows 11 / Windows Server
+   - Parrot OS
+   - TrueNAS
+
+4. **Docker Services (Application Layer)**
+   - Pi-hole (DNS filtering)
+   - Wazuh (monitoring)
+   - Wildid (self-hosted app)
 
 ---
 
 # 🔍 Core Components
 
-## 1. Virtual Machines
-Multiple VMs are used to simulate real systems, allowing for:
-- attack/defense scenarios
-- system monitoring
-- configuration testing
+## 1. Proxmox Hypervisor
+- Hosts all virtual machines
+- Enables resource allocation and isolation
+- Provides centralized infrastructure management
 
-## 2. Linux Systems
+---
+
+## 2. pfSense Firewall
+- Controls inbound/outbound traffic
+- Manages routing between networks
+- Supports secure lab segmentation
+- Used for practicing firewall rule configuration
+
+---
+
+## 3. Ubuntu Server (Docker Host)
+Acts as the main service host:
+- Runs Docker containers
+- Managed via SSH and CLI
+- Central point for application deployment
+
+---
+
+## 4. Docker Environment
+
+### Running Services:
+- **Pi-hole**
+  - DNS filtering and ad blocking
+  - Visibility into network queries
+
+- **Wazuh**
+  - System monitoring and event visibility
+  - Log collection and analysis
+
+- **Wildid**
+  - Self-hosted application
+  - Used for container deployment practice
+
+---
+
+## 5. Windows Systems
+
+### Windows 11
+- Primary user system
+- Used for management and testing
+
+### Windows Server
+- Used for:
+  - server configuration
+  - administrative tasks
+  - system management
+
+---
+
+## 6. Parrot OS
 Used for:
-- server setup
-- command-line administration
-- scripting and automation
-- security tooling
+- security testing
+- network scanning
+- enumeration
 
-## 3. Windows Systems
-Used for:
-- endpoint behavior analysis
-- system administration practice
-- troubleshooting exercises
+---
 
-## 4. Security Monitoring (Wazuh)
-Provides visibility into:
-- system activity
-- log data
-- potential security events
+## 7. TrueNAS
+Provides:
+- centralized storage
+- file sharing
+- backup capabilities
 
-## 5. Network Analysis
-Tools like Wireshark and Nmap are used to:
-- analyze packets
-- discover hosts/services
-- validate network configurations
+---
 
-## 6. Forensics Lab
-Includes workflows for:
-- disk imaging using `dd`
-- mounting and analyzing images
-- investigating artifacts using Autopsy
-- verifying file integrity with hashes
+## 8. Network & Analysis Tools
+
+- **Nmap** → discover hosts and services  
+- **Wireshark** → analyze packet-level traffic  
+- **SSH** → secure remote access  
 
 ---
 
 # 🧠 Example Use Cases
 
-- Scanning a network with Nmap and analyzing results
-- Capturing and inspecting packets with Wireshark
-- Monitoring system activity using Wazuh
-- Investigating suspicious files or behavior
-- Creating and analyzing disk images
-- Practicing Linux system administration tasks
-- Troubleshooting connectivity or system issues
+- Filtering and analyzing DNS traffic with Pi-hole  
+- Monitoring system activity with Wazuh  
+- Managing virtual machines in Proxmox  
+- Configuring firewall rules in pfSense  
+- Scanning the network with Nmap  
+- Capturing packets with Wireshark  
+- Testing systems using Parrot OS  
+- Managing storage with TrueNAS  
+- Troubleshooting connectivity and system issues  
 
 ---
 
 # 🛠️ Skills Demonstrated
 
-- Linux administration and command line usage  
-- Windows system management  
-- Network scanning and traffic analysis  
-- Security monitoring and log analysis  
-- Basic threat detection and investigation  
-- Digital forensics techniques  
-- Disk imaging and data integrity validation  
-- Troubleshooting systems and networks 
+- Virtualization (Proxmox)  
+- Firewall configuration and network control (pfSense)  
+- Linux server administration  
+- Docker container management  
+- DNS filtering and traffic control  
+- Security monitoring and analysis  
+- Network scanning and packet inspection  
+- Windows system administration  
+- Cross-platform troubleshooting  
+- Storage management (TrueNAS)
