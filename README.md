@@ -40,6 +40,18 @@ The lab is designed to provide hands-on experience with:
 - Strengthen troubleshooting and debugging skills  
 
 ---
+## 🧰 Homelab Hardware
+
+![Homelab Rack](screenshots/hardware/rack.jpg)
+
+Compact homelab rack featuring:
+
+- Rack-mounted patch panel and network switch
+- Multiple Dell OptiPlex nodes running Proxmox
+- Dedicated systems for virtualization, storage, and services
+- Structured cabling for network organization
+
+This hardware setup supports virtualization, containerized services, and network experimentation in a controlled environment.
 
 # 🧰 Tools & Technologies
 
