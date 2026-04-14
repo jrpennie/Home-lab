@@ -42,7 +42,7 @@ The lab is designed to provide hands-on experience with:
 ---
 ## 🧰 Homelab Hardware
 
-![Homelab Rack](screenshots/hardware/rackv1.png)
+![Homelab Rack](screenshots/hardware/rackv2.png)
 
 Compact homelab rack featuring:
 
