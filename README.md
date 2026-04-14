@@ -46,8 +46,8 @@ The lab is designed to provide hands-on experience with:
 
 Compact homelab rack featuring:
 
-- Rack-mounted patch panel and network switch
-- Multiple Dell OptiPlex nodes running Proxmox
+- Rack-mounted patch panel and Dell x1018
+- Multiple Dell OptiPlex 5060 nodes running Proxmox
 - Dedicated systems for virtualization, storage, and services
 - Structured cabling for network organization
 
@@ -69,7 +69,7 @@ This hardware setup supports virtualization, containerized services, and network
 ## 🐳 Containerized Services (Docker)
 - **Pi-hole** — network-wide DNS filtering
 - **Wazuh** — host-based monitoring and security visibility
-- **Wildid** — self-hosted application
+- **WildId** — self-hosted application
 
 ## 🔐 Security & Analysis
 - **Nmap** — network scanning and enumeration
@@ -79,7 +79,6 @@ This hardware setup supports virtualization, containerized services, and network
 ## 🧪 Forensics
 - **Autopsy** — forensic analysis
 - **dd** — disk imaging
-- **Hash verification tools** — integrity validation
 
 ---
 
@@ -100,14 +99,14 @@ The lab follows a layered architecture:
 
 3. **Virtual Machines (System Layer)**
    - Ubuntu Server (Docker host)
-   - Windows 11 / Windows Server
-   - Parrot OS
+   - Windows 11 / Windows Server (Enterprise Simulation)
+   - Parrot OS (Attack)
    - TrueNAS
 
 4. **Docker Services (Application Layer)**
    - Pi-hole (DNS filtering)
    - Wazuh (monitoring)
-   - Wildid (self-hosted app)
+   - WildId (Software Projects Final Project)
 
 ---
 
@@ -166,6 +165,7 @@ Acts as the main service host:
   - server configuration
   - administrative tasks
   - system management
+  - domain controller
 
 ---
 
@@ -211,7 +211,7 @@ Provides:
 
 - Virtualization (Proxmox)  
 - Firewall configuration and network control (pfSense)  
-- Linux server administration  
+- Linux server administration  (Ubuntu Server)
 - Docker container management  
 - DNS filtering and traffic control  
 - Security monitoring and analysis  
