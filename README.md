@@ -105,7 +105,9 @@ The lab follows a layered architecture:
 - Hosts all virtual machines
 - Enables resource allocation and isolation
 - Provides centralized infrastructure management
+## 🖥️ Proxmox Datacenter Overview
 
+![Proxmox Datacenter](screenshots/proxmox/datacenter-overview.png)
 ---
 
 ## 2. pfSense Firewall
