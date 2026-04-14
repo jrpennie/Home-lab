@@ -107,7 +107,7 @@ The lab follows a layered architecture:
 - Provides centralized infrastructure management
 ## 🖥️ Proxmox Datacenter Overview
 
-![Proxmox Datacenter](screenshots/proxmox/datacenter-overview.png)
+![Proxmox Datacenter](screenshots/proxmox/datacenter-summary.png)
 ---
 
 ## 2. pfSense Firewall
